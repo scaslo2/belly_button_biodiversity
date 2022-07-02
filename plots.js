@@ -1,3 +1,5 @@
+
+
 function init() {
     var selector = d3.select("#selDataset");
   
@@ -24,6 +26,9 @@ function init() {
       var metadata = data.metadata;
       var resultArray = metadata.filter(sampleObj => sampleObj.id == sample);
       var result = resultArray[0];
+      Object.entries(result).forEach(([key,value]) => 
+        {console.log(key + ': ' + value);});
+        
       var PANEL = d3.select("#sample-metadata");
   
       PANEL.html("");
@@ -31,4 +36,5 @@ function init() {
     });
   }
 
+  
   
