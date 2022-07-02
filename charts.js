@@ -69,7 +69,7 @@ function buildCharts(sample) {
     var otuId = output.otu_ids;
     var otuLables = output.otu_labels;
     var sampleValues = output.sample_values;
-    console.log(otuId);
+    
     // 7. Create the yticks for the bar chart.
     // Hint: Get the the top 10 otu_ids and map them in descending order  
     //  so the otu_ids with the most bacteria are last. 
