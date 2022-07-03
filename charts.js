@@ -94,7 +94,7 @@ function buildCharts(sample) {
     console.log(sortedIds);
     console.log(tenIds);
 
-    var sortedValues = sampleValues.sort((a,b) => a - b);
+    var sortedValues = sampleValues.sort((a,b) => b - a).reverse();
     var tenValues = sortedValues.slice(0,10);
     console.log(sortedValues);
     console.log(tenValues);
