@@ -66,7 +66,7 @@ function buildCharts(sample) {
     
     //  5. Create a variable that holds the first sample in the array.
     var output = samplesArray[0];
-
+    console.log(output);
     // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
     var otuId = output.otu_ids;
     var otuLables = output.otu_labels;
@@ -81,7 +81,7 @@ function buildCharts(sample) {
     var tenIds = sortedIds.slice(0,10);
     console.log(sortedIds);
     console.log(tenIds);
-    var yticks = tenIds.map(id => );
+    //var yticks = tenIds.map(id => );
 
     // 8. Create the trace for the bar chart. 
     var barData = [
