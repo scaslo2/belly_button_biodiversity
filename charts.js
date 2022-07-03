@@ -103,7 +103,7 @@ function buildCharts(sample) {
     var yticks = tenIds.map(id => String(id));
     console.log(yticks);
 
-    var names = ['dog', 'cat', 'mouse', 'bed', 'hammer', 'six', 'seven', 'eight', 'nine', 'ten'];
+    var names = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
     // 8. Create the trace for the bar chart. 
     var trace = {
       x: tenValues,
