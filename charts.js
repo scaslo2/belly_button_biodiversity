@@ -89,7 +89,7 @@ function buildCharts(sample) {
 
 
     var yticks = tenIds.map(id => String(id));
-
+    console.log(yticks);
     // 8. Create the trace for the bar chart. 
     var trace = {
       x: tenValues,
