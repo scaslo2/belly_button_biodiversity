@@ -127,8 +127,10 @@ function buildCharts(sample) {
       x: otuId,
       y: sampleValues,
       text: otuLables,
-      mode: 'markers'
-      //marker: {}      
+      mode: 'markers',
+      marker: {
+        size: sampleValues
+      }      
 
     };
     var bubbleData = [trace1];
