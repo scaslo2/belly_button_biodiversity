@@ -95,7 +95,8 @@ function buildCharts(sample) {
       x: tenValues,
       y: yticks,
       type: 'bar',
-      text: otuLables
+      text: otuLables,
+      orientation: 'h'
     };
     var barData = [trace];
 
