@@ -100,10 +100,10 @@ function buildCharts(sample) {
     console.log(tenValues);
 
 
-    var yticks = tenIds.map(id => 'OTU'.concat(String(id)));
+    var yticks = tenIds.map(id => 'OTU '.concat(String(id)));
     console.log(yticks);
 
-    //var names = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
+    
     // 8. Create the trace for the bar chart. 
     var trace = {
       x: tenValues,
@@ -175,7 +175,9 @@ function buildCharts(sample) {
     
     // 5. Create the layout for the gauge chart.
     var gaugeLayout = { 
-     
+      width: 500,
+      height: 400,
+      margin: { t: 25, r: 25, l: 25, b: 25 }
     };
 
     // 6. Use Plotly to plot the gauge data and layout.
