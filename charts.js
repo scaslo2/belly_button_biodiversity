@@ -131,7 +131,7 @@ function buildCharts(sample) {
       text: otuLables,
       mode: 'markers',
       marker: {
-        color: sampleValues,
+        color: otuId,
         size: sampleValues
       }      
 
