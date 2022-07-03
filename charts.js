@@ -68,7 +68,7 @@ function buildCharts(sample) {
     var output = samplesArray[0];
     console.log(output);
     // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
-    var otuId = output.otu_ids;
+    var otuId = output.map(id => String(id.otu_ids));
     var otuLables = output.otu_labels;
     var sampleValues = output.sample_values;
     console.log(otuId);
@@ -78,7 +78,7 @@ function buildCharts(sample) {
     //  so the otu_ids with the most bacteria are last. 
 
     var sortedIds = otuId.sort((a,b) => b - a);
-    var tenIds = sortedIds.slice(0,10).toString();
+    var tenIds = sortedIds.slice(0,10);
     console.log(sortedIds);
     console.log(tenIds);
 
