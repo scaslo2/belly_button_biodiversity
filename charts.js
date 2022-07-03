@@ -78,20 +78,30 @@ function buildCharts(sample) {
     //  so the otu_ids with the most bacteria are last. 
 
     var sortedIds = otuId.sort((a,b) => b.sample_values - a.sample_values);
-    var tenIds = sortedIds.slice(0,10);
+    var tenIds = sortedIds.slice(10, );
     console.log(sortedIds);
     console.log(tenIds);
+
+    var sortedValues = sampleValues.sort((a,b) => b - a);
+    var tenValues = sortedValues.slice(10, );
+    console.log(sortedValues);
+    console.log(tenValues);
     //var yticks = tenIds.map(id => );
 
     // 8. Create the trace for the bar chart. 
-    var barData = [
-      
-    ];
+    var trace = {
+      x: tenValues,
+      y: tenIds,
+      type: 'bar',
+      text: tenIds
+    };
+    var barData = [trace];
+
     // 9. Create the layout for the bar chart. 
     var barLayout = {
-     
+      title: "Top 10 Bacteria Cultures Found"
     };
     // 10. Use Plotly to plot the data with the layout. 
-    
+    Plotly.newPlot("bar", barData, barLayout);
   });
 }
