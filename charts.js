@@ -68,7 +68,7 @@ function buildCharts(sample) {
     var output = samplesArray[0];
     console.log(output);
     // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
-    var otuId = output.otu_ids;
+    var otuId = output.otu_ids.toString();
     var otuLables = output.otu_labels;
     var sampleValues = output.sample_values;
     console.log(otuId);
