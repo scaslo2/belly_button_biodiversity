@@ -100,14 +100,14 @@ function buildCharts(sample) {
     console.log(tenValues);
 
 
-    var yticks = tenIds.map(id => String(id));
+    var yticks = tenIds.map(id => 'OTU'.concat(String(id)));
     console.log(yticks);
 
-    var names = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
+    //var names = ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10'];
     // 8. Create the trace for the bar chart. 
     var trace = {
       x: tenValues,
-      y: names,
+      y: yticks,
       type: 'bar',
       text: otuLables,
       orientation: 'h'
