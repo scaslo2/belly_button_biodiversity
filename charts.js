@@ -76,7 +76,6 @@ function buildCharts(sample) {
     var metaOutput = metadataArray[0];
     console.log(metaOutput);
 
-// SKIP DOWN TO THE BOTTOM TO CONTINUE FOR THE GAUGE CODE /////////////////////////////////////////////////
 
     // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
     var otuId = output.otu_ids;
@@ -84,6 +83,9 @@ function buildCharts(sample) {
     var sampleValues = output.sample_values;
     console.log(otuId);
     
+    // Gauge - 3. Create a variable that holds the washing frequency.
+    var wfreqValue = metaOutput.wfreq;
+    console.log(wfreqValue);
 
     // 7. Create the yticks for the bar chart.
     // Hint: Get the the top 10 otu_ids and map them in descending order  
@@ -145,13 +147,6 @@ function buildCharts(sample) {
     
     // 3. Use Plotly to plot the data with the layout.
     Plotly.newPlot("bubble", bubbleData, bubbleLayout);
-
-  
-// CONTINUE WITH GAUGE CODE BELOW /////////////////////////////////////////////////////////////////
-
-
-    // 3. Create a variable that holds the washing frequency.
-    var wfreqValue = metaOutput.wfreq;
 
 
     // 4. Create the trace for the gauge chart.
