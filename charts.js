@@ -68,7 +68,7 @@ function buildCharts(sample) {
     var output = samplesArray[0];
     console.log(output);
     // 6. Create variables that hold the otu_ids, otu_labels, and sample_values.
-    var otuId = output.otu_ids.map(id => String(id));
+    var otuId = output.otu_ids;
     var otuLables = output.otu_labels;
     var sampleValues = output.sample_values;
     console.log(otuId);
@@ -86,12 +86,14 @@ function buildCharts(sample) {
     var tenValues = sortedValues.slice(0,10);
     console.log(sortedValues);
     console.log(tenValues);
-    //var yticks = tenIds.map(id => );
+
+
+    var yticks = tenIds.map(id => String(id));
 
     // 8. Create the trace for the bar chart. 
     var trace = {
       x: tenValues,
-      y: tenIds,
+      y: yticks,
       type: 'bar',
       text: otuLables
     };
@@ -118,10 +120,10 @@ function buildCharts(sample) {
     
     // 2. Create the layout for the bubble chart.
     var bubbleLayout = {
-          title: "bacteria Cultures Per Sample",
-          xaxis: {title: "OTU ID"},
-          //margin: autoexpand,
-          hovermode: 'closest'
+      title: "bacteria Cultures Per Sample",
+      xaxis: {title: "OTU ID"},
+      //margin: autoexpand,
+      hovermode: 'closest'
     };
     
     // 3. Use Plotly to plot the data with the layout.
